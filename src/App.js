@@ -4,7 +4,9 @@ import axios from 'axios';
 
 import Navbar from './components/Navbar/Navbar'
 import HomeLeft from './components/HomeLeft/HomeLeft'
+import HomeRight from './components/HomeRight/HomeRight'
 import Footer from './components/Footer/Footer'
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -54,6 +56,10 @@ function App() {
               </div>
               ))
           }
+      </div>    
+      <div className="home-container">
+        <HomeLeft />
+        <HomeRight />
       </div>
       <Footer />
     </div>
