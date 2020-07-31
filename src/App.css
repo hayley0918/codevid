@@ -1,11 +1,3 @@
-.App {
-    display: grid;
-}
-
-.api-data {
-    margin-left: 15%;
-}
-
 .home-container{
     display: grid;
     grid-template-columns: 1fr 1fr;

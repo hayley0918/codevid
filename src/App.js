@@ -39,24 +39,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <HomeLeft />
-      <div className="api-data">
-        {isLoading 
-          ? <h3>loading data...</h3> 
-          : data
-              .sort((a,b) => b.attributes.Date - a.attributes.Date)
-              .map((entry, index) => (
-              <div key={index}>
-                <h3>{(new Date(entry.attributes.Date)).toString()}</h3>
-                <p>Total Cases: {entry.attributes.Total_Cases}</p>
-                <p>Total Tests: {entry.attributes.Total_Tests}</p>
-                <p>Positive Tests (by test): {((entry.attributes.Total_Cases)*100/entry.attributes.Total_Tests).toFixed(2)}%</p>
-                <p>Positive Tests (by population): {((entry.attributes.Total_Cases)*100/TOTAL_POPULATION).toFixed(2)}%</p>
-                <p>Total Deaths: {entry.attributes.Total_Deaths}</p>
-              </div>
-              ))
-          }
-      </div>    
       <div className="home-container">
         <HomeLeft />
         <HomeRight />
